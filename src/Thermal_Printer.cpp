@@ -521,7 +521,7 @@ GFXglyph glyph, *pGlyph;
 //
 // Print a string of characters in a custom font to the connected printer
 //
-int tpPrintCustomText(GFXfont *pFont, int startx, char *szMsg)
+int tpPrintCustomText(const GFXfont *pFont, int startx, char *szMsg)
 {
 int i, x, y, end_y, dx, dy, tx, ty, c, iBitOff;
 int maxy, miny, height;
@@ -819,7 +819,10 @@ int tpConnect(const char *szMacAddress)
     // Obtain a reference to the service we are after in the remote BLE server.
     BLERemoteService* pRemoteService = NULL;
     if (ucPrinterType == PRINTER_MTP2 || ucPrinterType == PRINTER_MTP3)
+    {
+      pClient->getServices(true);
        pRemoteService = pClient->getService(SERVICE_UUID0);
+    }
     else if (ucPrinterType == PRINTER_CAT)
        pRemoteService = pClient->getService(SERVICE_UUID1);
     else if (ucPrinterType == PRINTER_FOMEMO || ucPrinterType == PRINTER_PERIPAGE || ucPrinterType == PRINTER_PERIPAGEPLUS)

@@ -119,7 +119,7 @@ int tpDrawCustomText(GFXfont *pFont, int x, int y, char *szMsg);
 //
 // Print a string of characters in a custom font to the connected printer
 //
-int tpPrintCustomText(GFXfont *pFont, int x, char *szMsg);
+int tpPrintCustomText(const GFXfont *pFont, int x, char *szMsg);
 
 //
 // Send raw data to printer
