@@ -846,10 +846,10 @@ int tpConnect(const char *szMacAddress)
 #ifdef DEBUG_OUTPUT
           Serial.println("Got data transfer characteristic!");
 #endif
-          if (pRemoteCharacteristicData != NULL)
+         /* if (pRemoteCharacteristicData != NULL)
             if(pRemoteCharacteristicNotify->canNotify())
               pRemoteCharacteristicNotify->registerForNotify(ESP_notify_callback);
-
+		*/
           bConnected = 1;
           return 1;
         }
