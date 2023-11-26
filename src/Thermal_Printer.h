@@ -115,11 +115,11 @@ void tpGetStringBox(GFXfont *pFont, char *szMsg, int *width, int *top, int *bott
 //
 // Draw a string of characters in a custom font into the gfx buffer
 //
-int tpDrawCustomText(GFXfont *pFont, int x, int y, char *szMsg);
+int tpDrawCustomText(GFXfont *pFont, int x, int y, const char *szMsg);
 //
 // Print a string of characters in a custom font to the connected printer
 //
-int tpPrintCustomText(const GFXfont *pFont, int x, char *szMsg);
+int tpPrintCustomText(const GFXfont *pFont, int x, const char *szMsg);
 
 //
 // Send raw data to printer

@@ -455,7 +455,7 @@ int miny, maxy;
 //
 // Draw a string of characters in a custom font into the gfx buffer
 //
-int tpDrawCustomText(GFXfont *pFont, int x, int y, char *szMsg)
+int tpDrawCustomText(GFXfont *pFont, int x, int y, const char *szMsg)
 {
 int i, end_y, dx, dy, tx, ty, c, iBitOff;
 uint8_t *s, *d, bits, ucMask, ucClr, uc;
@@ -521,7 +521,7 @@ GFXglyph glyph, *pGlyph;
 //
 // Print a string of characters in a custom font to the connected printer
 //
-int tpPrintCustomText(const GFXfont *pFont, int startx, char *szMsg)
+int tpPrintCustomText(const GFXfont *pFont, int startx, const char *szMsg)
 {
 int i, x, y, end_y, dx, dy, tx, ty, c, iBitOff;
 int maxy, miny, height;
